@@ -1,0 +1,34 @@
+{% extends 'base1.html' %}
+{% load static %} 
+{% block title %}dashboard{% endblock %}
+{% block content %}
+
+
+<div class="row ">
+    <div class="col-md-12">
+
+    <div class="row pt-5 ps-5">
+        <div class="col-md-10 offset-1">
+           
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/issuedbooks/"> 
+                        <h2 class="bg-danger text-center border border-5 text-light pt-4 pb-4"><i class="fa-solid fa-book-open-reader fa-1x"></i>Total <br>issuebooks<br>{{issues}}</h2>
+                    </a>
+                        
+                </div>
+               
+                <div class="col-md-4">
+                    <a href="/returnedbooks/">
+                        <h2 class="bg-dark text-light text-center border border-5 pt-4 pb-4"><i class="fa-solid fa-book fa-1x"></i>Total<br>returnedbooks<br>{{ returns }}</h2>
+                </a>
+                </div>  
+            </div>
+           
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+{% endblock %}

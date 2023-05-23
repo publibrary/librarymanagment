@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+    
+<div class="row pt-5" id="bgcolor1">
+  <div class="col-md-10  offset-1">
+    <div class="row border p-5">
+      <div class="col-md-6">
+          <form action="/insertcontact/" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa fa-user"></i></span>
+              <input type="text" name="name" class="form-control" placeholder="Enter Your Name" />
+            </div></br>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+              <input type="tel"name="Mobileno" class="form-control" maxlength="10" pattern="[6\7\8\9][0-9]{9}" placeholder="Phone no"/>
+            </div></br>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" name="email"  class="form-control" placeholder="email" />
+            </div></br>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa-solid fa-message"></i></span>
+              <textarea name="message" placeholder="Send your Message" maxlength="100" class="form-control" row="8" cols="15" placeholder="Enter Your Message" ></textarea> 
+            </div></br> 
+            <div class="input-group">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div></br>
+          
+          </form>
+        </div>
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110335.77118058117!2d74.88864657664537!3d30.208751535317887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39173297173abbcd%3A0xa00033c0a58a5ac8!2sBathinda%2C%20Punjab!5e0!3m2!1sen!2sin!4v1677188669267!5m2!1sen!2sin" width="600" height="450" style="border:50;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

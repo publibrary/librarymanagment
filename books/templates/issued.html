@@ -1,0 +1,61 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block title %}issued{% endblock %}
+{% block content %}
+
+<div class="row" id="assign">
+    <div class="col-md-10">
+      <h2>Issued Book</h2>
+      <hr width="100%">
+    </div>
+</div>
+<div class="row">
+          
+            <!-- Modal body -->
+            <form action="/insertbook/" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+            
+              <div class="row">
+                <div class="col-md-12">
+                  
+                    <div class="row">
+                      <div class="col-md-4">
+                       
+                        <input type="hidden" name="username" value="{{ user.id }}" />
+                        <input type="hidden" name="bookid" value="{{ b.id }}" />
+                        <input type="hidden" name="fine" value="0" />
+                        <input type="hidden" name="enrollment_no" value="book{{ user.id }}enroll{{ b.id }}" />
+                        <input type="hidden" name="status" value="Issued" />
+                      </div>
+                    </div>
+                    
+                    <div class="row pt-3">
+                        <div class="col-md-4 Date-field">
+                          <label class="fs-5 fw-bold">Issue Date</label>
+                         </div>
+                        <div class="col-md-8">
+                          <input type="date" class="form-control form-control-lg" id="missuedate" name="issuedate" >
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-md-4 Date-field">
+                          <label class="fs-5 fw-bold">Return Date</label>
+                         </div>
+                        <div class="col-md-8">
+                          <input type="date" class="form-control form-control-lg" id="mreturndate" name="returndate" >
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
+         
+              <button type="Submit" class="btn btn-warning">Submit</button>
+            
+          </form>
+      
+</div>
+<script>
+  document.getElementById('missuedate').value = moment().format('YYYY-MM-DD');
+  document.getElementById('mreturndate').value = moment().add(15, 'days').format('YYYY-MM-DD');
+  </script>
+{% endblock %}

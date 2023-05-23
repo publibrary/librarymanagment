@@ -1,0 +1,36 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block title %}issuedbooks{% endblock %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>enrollment_no</th>
+                    <th>username</th>
+                    <th>bookid</th>
+                    <th>issue date</th>
+                    <th>return date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in issueb %}
+                <tr>
+                    <td>{{ i.enrollment_no }}</td>
+                    <td>{{ i.username }}</td>
+                    <td>{{ i.bookid }}</td>
+                    <td>{{ i.issuedate }}</td>
+                    <td>{{ i.returndate }}</td>
+                    <td>{{ i.status }}</td>
+                    
+                </tr>
+                {% endfor %}        
+            </tbody> 
+        </table>
+     </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}spaces{% endblock %}
+{% block content %}
+
+
+<div class="row" id="image3">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 text-center" id="study">
+                <h3 class="text-white display-4 fw-bold pt-5">Spaces & Rooms</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center pt-5">
+            <h1>Explore <span class="text-danger">Our facilities</span></h1>
+        </div> 
+    </div>
+</div>
+<!-- services starts -->
+    <div class="row pt-3">
+        <div class="col-md-10 offset-1">
+            <div class="row border bg-light">
+                <div class="col-md-6 pt-2">
+                    <h4 class="fw-bold">Reading Rooms</h4>
+                    <h6 class="fw-bold">Silent study Space</h6>
+                    <p id="space"> A Library space type may include both open and closed storage systems and moveable shelving systems, and be applicable to file rooms and other dense storage of material in conditioned office environments. Libraries are assumed to be general purpose, and may include display spaces and reading, meeting, and electronic workstations, as defined by the desired level of access to materials being stored.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'images/silent study.jpg' %}" height="330px" width="630px"/>
+                </div>
+            </div>
+        </div>
+    </div>      
+
+    <div class="row pt-5">
+        <div class="col-md-10 offset-1"> 
+            <div class="row border">
+                <div class="col-md-6 ">
+                    <img src="{% static 'images/groupstudy.jpg' %}" id="spaceimg" height="330px" width="640px"/>
+                </div>
+                <div class="col-md-6 ps-5 bg-light">
+                    <h4 class="fw-bold">Group Study Rooms</h4>
+                    <h6 class="fw-bold">Collaborative Study Spaces</h6>
+                    <p id="space">STUDY ROOMS ARE NOT SOUNDPROOF, therefore conversations should be kept low so as not to disturb patrons in other rooms/areas or neighboring staff offices.STUDY ROOMS CANNOT BE USED FOR social gatherings, playing games, tutoring for profit, non-academic projects, and regularly scheduled classes. Library staff may ask individuals to vacate a room if the space is being used for anything other than its intended purpose.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<div class="row pt-5">
+    <div class="col-md-10 offset-1">
+        <div class="row border bg-light">
+            <div class="col-md-6 pt-2 ">
+                <h4 class="fw-bold">Silent Study Zones</h4>
+                <h6 class="fw-bold">Zero-Noise Study Spaces</h6>
+                <p id="space">The library can be noisy at times, especially during peak periods.The silence rules are not respected!People still make noise and bring their laptops into the zero-noise, no typing room!The library spaces should be reserved for Concordia students only!</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/zeronoise.jpg' %}" height="330px" width="630px"/>
+            </div>
+        </div></br>
+
+        <!-- <div class="row pt-5">
+            <div class="col-md-10 offset-1"> 
+                <div class="row border">
+                    <div class="col-md-6 ">
+                        <img src="{% static 'images/meeting.jpg' %}" id="spaceimg" height="330px" width="640px"/>
+                    </div>
+                    <div class="col-md-6 ps-5 bg-light">
+                        <h4 class="fw-bold">Events & Special Occasions</h4>
+                        <h6 class="fw-bold">Meeting & Event Function Rooms</h6>
+                        <p id="space">Whether you're hosting a Board, Corporate or Association meeting, Workshop or Information Session, the Scientia Public Library's Meetings & Event Services department can provide you with a variety of meeting and function rooms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>  -->
+    </div>
+<!-- services ends -->
+</div> 
+
+{% endblock %}

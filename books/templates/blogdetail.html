@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}blogs{% endblock %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-10 ">
+    </div>
+
+    <div class="col-md-10 offset-1">
+        <img src="/media/{{b.photo}}" width="100%" height="500">
+        <h3 class="pt-3">{{b.title}}</h3>
+        <p class="blog">{{ b.description|safe }}</p> 
+        <p>{{ b.postby }}({{ b.poston }})</p>
+    </div>
+</div>
+
+
+{% endblock %}

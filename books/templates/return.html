@@ -1,0 +1,35 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block title %}return{% endblock %}
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" action="/updatereturn/{{ r.id }}">   
+            {% csrf_token %}     
+        <label>Enrollment number</label>
+        <p>{{ r.enrollment_no }}</p>
+        <input type="hidden" name="enrollment_no"  class="form-control" value="{{ r.enrollment_no }}">
+        <input type="hidden" class="form-control"  name="username" value="{{ r.username_id }}" >
+        <input type="hidden" class="form-control"  name="bookid" value="{{ r.bookid_id }}">
+        <label>issuedate</label>
+        <p>{{ r.issuedate }}</p>
+        <input type="hidden" class="form-control"  name="issuedate" value="{{ r.issuedate }}">
+        <label>returndate</label>
+        <p>{{ r.returndate }}</p>
+        <label>Set Return Date</label>
+        <input type="date" class="form-control" id="setreturn"  name="returndate" value="{{ r.returndate }}">
+        <label>fine</label>
+        <input type="fine" class="form-control"  name="fine" value="{{ r.fine }}">
+      <button class="btn btn-primary">Update</button>
+        </a>
+    </form>
+
+    </div>
+</div>
+<script>
+    document.getElementById('setreturn').value = moment().format('YYYY-MM-DD');
+    
+    </script>
+{% endblock %}

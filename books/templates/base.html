@@ -1,0 +1,141 @@
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet" />
+        <link href="{% static 'css/bootstrap-grid.min.css'%}" type="text/css" rel="stylesheet" />
+        <link href="{% static 'style.css'%}" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="{% static 'ihover-gh-pages/src/ihover.css' %}" rel="stylesheet" />
+        <link href="{% static 'aos-master/dist/aos.css' %}" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora:ital@1&family=Shantell+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora:ital@1&family=Shantell+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="{% static 'jquery.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+        <script src="{% static 'aos-master/dist/aos.js'%}"></script>
+        <script>
+            $(document).ready(function(){
+                AOS.init();
+                });
+        </script>
+    </head>
+<body>
+    <!-- header sectio starts -->
+    <div class="container-fluid">
+        <div class="row sticky-top bg-white p-4">
+            <div class="col-md-1">
+                <img src="{% static 'images/Open-book.png' %}" width="100%" class="ps-4" />
+            </div>
+            <div class="col-md-1">
+                <h3 class="ps-0 pt-2 fw-bold">Public <span class="text-danger">Library</span></h3>
+            </div>
+            <div class="col-md-10 pt-3" data-aos="fade-down-right">
+                <nav>
+                    <ul class="nav" id="nav">
+                        <ul><a href='/home/' class="nav-link">Home</a></ul>
+                        <ul><a href='/About/' class="nav-link">About</a></ul>
+                        <ul><a href='/Ourbooks/' class="nav-link">Our Books</a></ul>
+                        <ul><a href='/Blogs/' class="nav-link">Blogs</a></ul>
+                        <ul><a href='/spaces/' class="nav-link">SPaces & Rooms </a></ul>
+                        <ul><a href='/contact/' class="nav-link">Contact</a></ul>
+                        <ul><a href='/faq/' class="nav-link">Faq</a></ul>
+                        <div class="dropdown">
+                            <button class="btn fw-bold pt-2 fs-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btnmenu">
+                             My Account
+                            </button>
+                            <ul class="dropdown-menu">
+                                
+                                {% if user.is_authenticated %}
+                                <li><a class="dropdown-item" href="javascript:void(0)">Hi, {{ user.username }}</a></li> 
+                                <li><a class="dropdown-item" href="/logout/">Logout</a></li> 
+                                {% else %}
+                                <li><a class="dropdown-item" href="/signup/">User_Login</a></li>   
+                              <li><a class="dropdown-item" href="/signup/">User_Signup</a></li>
+                              {% endif %}
+                            </ul>
+                          </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    <!-- header section ends -->
+{% block content %}
+
+{% endblock %}
+    <!-- footer section starts -->
+        <div class="row" id="footerbg">
+            <div class="col-md-12 fw-bold">
+                <div class="row" id="footpad">
+                    <div class="col-md-4 ps-5 pt-2 fw-bold text-dark">
+                        <h1 class="ps-5" id="foothead">Get in Touch</h1>
+                        <ul type="none" id="linkfoot">
+                            <li class="ps-3 pt-3"><span><i class="fa-solid fa-phone text-dark"></i></span> +567 789 7898</li>
+                            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=Growcerystore07@gmail.com" target="_blank" class="nav-link text-dark"><i class="fa-solid fa-square-envelope"></i> publiclib08@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 fw-bold ps-5 pt-2 text-dark">
+                        <h1 id="foothead">Quick Links</h1>
+                        <ul type="none" class="ps-2 pt-1 fw-bold" id="linkfoot2">
+                            <li class="pt-2"><a href="/home/"><i class="fa-solid fa-angle-right"></i>Home</a></li>
+                            <li class="pt-2"><a href="/About/"><i class="fa-solid fa-angle-right"></i>About</a></li>
+                            <li class="pt-2"><a href="/Ourbooks/"><i class="fa-solid fa-angle-right"></i>Our Books</a></li>
+                            <li class="pt-2"><a href="/Blogs/"><i class="fa-solid fa-angle-right"></i>Blogs</a></li>
+                            <li class="pt-2"><a href="/spaces/"><i class="fa-solid fa-angle-right"></i>Spaces & Rooms</a></li>
+                            <li class="pt-2"><a href="/contact/"><i class="fa-solid fa-angle-right"></i>contact</a></li>
+                            <li class="pt-2"><a href="/faq/"><i class="fa-solid fa-angle-right"></i>faq</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 fw-bold pt-2 ps-4 text-dark">
+                        <h1>Login & Signup</h1>
+                        <ul type="none" class="ps-2 pt-1 fw-bold" id="linkfoot2">
+                           <li class="pt-2"><a href="/signup/"><i class="fa-solid fa-angle-right"></i>User login</a></li>
+                           <li class="pt-2"><a href="/signup/"><i class="fa-solid fa-angle-right"></i>User signup</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- footer section ends  -->
+</div>
+
+</body>
+<script>
+$(document).ready(function(){
+
+
+var typed = new Typed('.element', {
+});
+AOS.init();
+});
+$(document).ready(function() {
+
+$('.counter').each(function () {
+$(this).prop('Counter',0).animate({
+Counter: $(this).text()
+}, {
+duration: 4000,
+easing: 'swing',
+step: function (now) {
+$(this).text(Math.ceil(now));
+}
+});
+});
+
+});  
+
+</script>
+</html>

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+    <div class="row" id="image1">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center" id="about">
+                      <h3 class="text-white display-4 fw-bold pt-5">About US</h3>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-5">
+            <h1>Our <span class="text-danger">Features</span></h1>
+        </div> 
+        <div class="row pt-5">
+            <div class="col-md-10  border p-5 offset-1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 id="staff1">Library Staff is here to help!</h1>
+                        <p id="Staff">Librarians are the backbone of any library. They engage with members to teach them about their cataloging system and direct them towards particular genres to find what is needed for entertainment, education, or research purposes all while maintaining an organized facility, and being responsible for late fees payment processing.</p>
+                        <p id="staff">A Librarian's responsibilities include hiring employees, ordering books from publishers, processing late fees if necessary, and organizing book displays. Librarians also coordinate community programs that increase library awareness while evaluating inventory needs for new technologies within their local system.</p>
+                        <p id="staff">Librarians serve their local community in their libraries. They also often work within schools to support children's education. Because of this, they connect with the School Administrator, who helps them with administrative tasks.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="{% static 'images/library_staff2.jpg' %}" height="650px" width="600px"/>
+                    </div>
+                </div>
+            </div>
+        </div></br>
+        <!-- SERVICES -->
+        
+        <div class="text-center">
+            <h1>Our <span class="text-danger fw-bold">Services</span></h1>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 offset-1">
+            <div class="row" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="700">
+              {% for s in services %}
+              <div class="col-md-4 md-5">
+                <img src="/media/{{s.photo}}" width="100%" height="200px" />
+                <div class="col-md-12 bg-light p-3" id="service">
+                  <h2 class="fw-bold">{{s.name}}</h2>
+                  <p class="fs-4 text-secondary">{{s.description}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+    <!-- SERVICES -->
+    
+</div>
+
+{% endblock %}

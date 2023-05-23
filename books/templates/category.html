@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}category{% endblock %}
+{% block content %}
+
+<div class="row pt-5">
+    <div class="col-md-10 offset-1">
+        <div class="row pt-1">
+            {% for c in books %}
+            <div class="col-md-4 p-3">
+                <a href="/categorydetail/{{ c.id }}" class="text-decoration-none text-dark">
+                    <img src="/media/{{ c.coverphoto }}" height="350" width="100%" />
+                    <h3>{{ c.booktitle }}</h3>
+                    <h6>{{ c.categoryid }}</h6>
+                    <h6>{{ c.bookstatus}}</h6>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

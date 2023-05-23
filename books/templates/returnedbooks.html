@@ -1,0 +1,59 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block title %}issuedbooks{% endblock %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>enrollment_no</th>
+                    <th>username</th>
+                    <th>bookid</th>
+                    <th>issue date</th>
+                    <th>return date</th>
+                    <th>Status</th>
+                    <th>Fine</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    
+                   
+                {% for i in issueba %}
+                <tr>
+                    <td>{{ i.enrollment_no }}</td>
+                    <td>{{ i.username }}</td>
+                    <td>{{ i.bookid }}</td>
+                    <td>{{ i.issuedate }}</td>
+                    <td>{{ i.returndate }}</td>
+                    <td>{{ i.status }}</td>
+                    <td>{{ i.fine }} <br>
+                    {% if i.fine > 0 %}
+                        
+                        {% if i.issues.exists %}
+                        <p class="text-success">PAID</p>
+                        {% else %}
+                    <form action="{% url 'payment' %}" method='POST'>
+                  {% csrf_token %}
+                <input type="hidden" name="name" value="{{ i.username }}">
+                <input type="hidden" name="provider_order_id" value="{{ i.enrollment_no }}">
+                <input type="hidden" name="amount" value="{{ i.fine }}">
+                <input type="hidden" name="issueid" value="{{ i.id }}">
+                <button class="btn btn-info">Pay Fine</button>
+                </form>
+                {% endif %}
+                
+                {% endif %}
+                
+                </td>   
+                </tr>
+                {% endfor %}      
+                
+            </tbody> 
+        </table>
+     </div>
+</div>
+
+{% endblock %}

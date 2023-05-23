@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="row ">
+  <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/library 7.jpg' %}" height="800px" width="100%" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slider">
+          <p class="text-center pb-5 fw-bold  text-warning" id="slider1">Library Office Security Administration</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/library 2.jpg' %}" height="800px" width="100%" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slider"> 
+          <p class="text-center pb-5 fw-bold text-white" id="slider1">I can help you find information, choose books, locate materilas</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/library 3.jpg' %}" height="800px" width="100%" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slider">
+          <p class="text-center pb-5 fw-bold text-white" id="slider1">Equipment You Can Borrow</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> 
+    <!--  -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h6 class="display-4 pt-5 fw-bold fs-1 text-dark">Welcome to the Library</h6>
+                    <p class="fs-5 text-dark">Welcome to the most popular Public Library</p>
+                    <i class="fa-solid fa-book" id="icon"></i>
+                </div>
+            </div></br>
+    
+            <div class="row">
+                <div class="col-md-10 offset-1" data-aos="fade-down-right">
+                    <div class="row" id="service">
+                        <div class="col-md-3 ps-5">
+                            <img src="{% static 'images/ebook.jpg' %}" width="100%" />
+                            <h3 class="pt-4 text-center fw-bold">EBOOKS</h3>
+                            <p class="fs-5 text-center">An electric version of a printed book that can be read on a computer</p>
+                        </div>
+                        <div class="col-md-3 ps-5">
+                            <img src="{% static 'images/audiobook.jpg' %}" width="100%" />
+                            <h3 class="pt-4 text-center fw-bold">AUDIO BOOKS</h3>
+                            <p class="fs-5 text-center">An electric version of a printed book that can be read on a computer</p>
+                        </div>
+                        <div class="col-md-3 ps-5">
+                            <img src="{% static 'images/magazine.jpg' %}" width="100%" />
+                            <h3 class="pt-4 text-center fw-bold">MAGAZINES</h3>
+                            <p class="fs-5 text-center">An electric version of a printed book that can be read on a computer</p>
+                        </div>
+                        <div class="col-md-3 ps-5">
+                            <img src="{% static 'images/t&k.jpg' %}" width="100%" />
+                            <h3 class="pt-4 text-center fw-bold">TEAN & KIDS</h3>
+                            <p class="fs-5 text-center">An electric version of a printed book that can be read on a computer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--  -->
+            
+            <!-- famous author starts -->
+            <div class="row bg-light">
+                <div class="col-md-12 text-center">
+                    <h6 class="display-4 pt-5 fw-bold fs-1 text-dark">OUR TOP AUTHORS</h6>
+                    <p class="fs-5 text-dark">Now, Here are the some popular authors</p>
+                    <i class="fa-solid fa-book" id="icon"></i>
+                </div>
+
+                <div class="col-md-8 offset-2">
+                    <div class="row pt-5">
+                        <div class="col-md-3">
+                            <div class="ih-item square effect13 top_to_bottom"><a href="#">
+                                <div>
+                                    <div class="img"><img src="{% static 'images/author1.jpg' %}" alt="img" height="500px" width="100%"/></div>
+                                    <div class="info">
+                                        <h3>Arundati Roy</h3>
+                                        <p>Author</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ih-item square effect13 top_to_bottom"><a href="#">
+                                <div>
+                                    <div class="img"><img src="{% static 'images/Chetan_Bhagat.jpg' %}" alt="img" height="500px" width="100%"/></div>
+                                    <div class="info">
+                                        <h3>Chetan Bhagat</h3>
+                                        <p>Author</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ih-item square effect13 top_to_bottom"><a href="#">
+                                <div>
+                                    <div class="img"><img src="{% static 'images/Swati_Kaushallr.jpg' %}" alt="img" height="500px" width="100%"/></div>
+                                    <div class="info">
+                                        <h3>Swati Kaushallr</h3>
+                                        <p>Author</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ih-item square effect13 top_to_bottom"><a href="#">
+                                <div>
+                                    <div class="img"><img src="{% static 'images/Ruskin_Bond.jpg' %}" alt="img" height="500px" width="100%"/></div>
+                                    <div class="info">
+                                        <h3>Ruskin Bond</h3>
+                                        <p>Author</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- famous author ends -->
+
+            <!-- famous book starts -->
+            <div class="row bg-light">
+                <div class="col-md-12 text-center">
+                    <h6 class="display-4 pt-5 fw-bold fs-1 text-dark">Book of the month</h6>
+                    <p class="fs-5 text-dark">Here are the most popular book that are available in the public Library</p>
+                    <i class="fa-solid fa-book" id="icon"></i>
+                </div>
+                <div class="flipbookkk">
+                    <iframe style="width:100%; height:600px" src="https://online.fliphtml5.com/vtfgd/lawh/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+                </div>
+            </div>
+            <!-- famous book ends -->
+
+            <!-- fact starts -->
+            <div class="row" id="image">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="text-white pt-5">IMPORTANT FACTS</h1>
+                            <i class="fa-solid fa-graduation-cap fa-3x text-light"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-1">
+                            <div class="row" id="fact">
+                                <div class="col-md-3">
+                                    <h6 class="text-white fw-bold fs-1">Top Authors</h6>
+                                    <h3 class="text-white display-3"><span class="text-white display-3 counter">57</span>+</h3>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-white fw-bold fs-1">Categories</h6>
+                                    <h3 class="text-white display-3"><span class="text-white display-3 counter">12</span>+</h3>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-white fw-bold fs-1">Books</h6>
+                                    <h3 class="text-white display-3"><span class="text-white display-3 counter">71</span>+</h3>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-white fw-bold fs-1">Happy Readers</h6>
+                                    <h3 class="text-white display-3"><span class="text-white display-3 counter">50</span>+</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></br>
+            <!-- fact ends -->
+
+            <!--  blogs -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="display-4 pt-5 fw-bold fs-1 text-dark">Latest Blog Posts</h3>
+                </div>
+            </div></br>
+    
+            <div class="row">
+                {% for b in blg %}
+                <div class="col-md-3 pt-4">
+                    <a href="/blogdetail/{{b.id}}" class="text-decoration-none text-dark">
+                        <img src="/media/{{b.photo }}" width="100%" height="200" />
+                        <h2>{{b.title}}</h2>  
+                        <p>{{b.postby }}({{b.poston }})</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <!--  blogs -->
+
+            <!-- subscribe to newsletter -->
+            <div class="row pt-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="700">
+                <div class="col-md-12">
+                    <div class="row" id="sub">
+                        <div class="col-md-7 text-center  text-dark display-1 " id="footer">
+                            <h1 class="pt-4 fw-bold">SUBSCRIBE </h1> 
+                            <h1 class="fw-bold"> TO OUR NEWSLETTER </h1>
+                        </div> 
+                        <div class="col-md-5 pt-5"> 
+                            <form action="/insertsubscribe/" method="post">
+                                {% csrf_token %}
+                                <div class="subscribe-form">
+                                    <input type="email"  name="Email"class="form-control-lg"  placeholder="Enter your email address" required/>
+                                    <input type="hidden" name="current_datetime" value="0000-00-00" />
+                                    <button class="btn btn-success btn-lg">Subscribe</button>
+                                </div>
+                            </form>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+            <!-- subscribe to newsletter -->
+        
+</div>
+
+{% endblock %}
